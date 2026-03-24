@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   // 플러터 엔진이 초기화되었는지 확인 (웹뷰 등 네이티브 기능 사용 시 필수)
   WidgetsFlutterBinding.ensureInitialized();
+
+  // 상태표시줄 스타일 설정 (흰색 글자로 바꾸고 싶을 때)
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // 안드로이드용
+    statusBarIconBrightness: Brightness.light, // 안드로이드용
+    statusBarBrightness: Brightness.dark, // iOS용 (글자를 흰색으로)
+  ));
+  
   runApp(const MaterialApp(
     home: WebViewApp(),
     debugShowCheckedModeBanner: false, // 오른쪽 상단 디버그 띠 제거
@@ -33,10 +42,6 @@ class _WebViewAppState extends State<WebViewApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('마루밑다락방'),
-        backgroundColor: Colors.blue,
-      ),
       body: WebViewWidget(controller: controller),
     );
   }
