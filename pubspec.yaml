@@ -102,7 +102,7 @@ flutter_native_splash:
  color: "#ffffff" # 흰색 예시입니다. 본인 앱 색상 코드로 바꾸세요.
 
  # 2. 로고 이미지 경로
- image: "assets/app_icon.png" # 방금 넣은 이미지 경로
+ image: "assets/icon.png" # 방금 넣은 이미지 경로
 
  # 3. 로고 위치 (중앙 추천)
  android: true # 안드로이드도 같이 만듭니다.
