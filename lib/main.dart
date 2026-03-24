@@ -12,7 +12,7 @@ void main() {
     statusBarIconBrightness: Brightness.light, // 안드로이드용
     statusBarBrightness: Brightness.dark, // iOS용 (글자를 흰색으로)
   ));
-  
+
   runApp(const MaterialApp(
     home: WebViewApp(),
     debugShowCheckedModeBanner: false, // 오른쪽 상단 디버그 띠 제거
@@ -42,7 +42,10 @@ class _WebViewAppState extends State<WebViewApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WebViewWidget(controller: controller),
-    );
+    // 상단바(AppBar)를 없앴으므로, body를 SafeArea로 감쌉니다.
+    body: SafeArea(
+      child: WebViewWidget(controller: controller),
+    ),
+  );
   }
 }
