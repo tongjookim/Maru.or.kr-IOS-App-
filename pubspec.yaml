@@ -97,17 +97,17 @@ flutter_launcher_icons:
   image_path: "assets/icon.png" # 아이콘 파일 경로
   remove_alpha_ios: true # iOS 아이콘 투명도 제거 (필수)
 
-  flutter_native_splash:
-  # 1. 배경색 (앱의 메인 컬러로 맞추세요)
-  color: "#ffffff" # 흰색 예시입니다. 본인 앱 색상 코드로 바꾸세요.
+flutter_native_splash:
+ # 1. 배경색 (앱의 메인 컬러로 맞추세요)
+ color: "#ffffff" # 흰색 예시입니다. 본인 앱 색상 코드로 바꾸세요.
 
-  # 2. 로고 이미지 경로
-  image: "assets/app_icon.png" # 방금 넣은 이미지 경로
+ # 2. 로고 이미지 경로
+ image: "assets/app_icon.png" # 방금 넣은 이미지 경로
 
-  # 3. 로고 위치 (중앙 추천)
-  android: true # 안드로이드도 같이 만듭니다.
-  ios: true     # iOS도 같이 만듭니다.
+ # 3. 로고 위치 (중앙 추천)
+ android: true # 안드로이드도 같이 만듭니다.
+ ios: true     # iOS도 같이 만듭니다.
 
-  # 4. 세부 속성 (iOS 전용)
-  # 아이폰/아이패드의 노치나 Dynamic Island 영역 주변을 보호합니다.
-  fullscreen: false
+ # 4. 세부 속성 (iOS 전용)
+ # 아이폰/아이패드의 노치나 Dynamic Island 영역 주변을 보호합니다.
+ fullscreen: false
